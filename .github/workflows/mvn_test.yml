@@ -14,7 +14,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-      
+
+      - name: Switch to Java Project
+        run: cd pilot-fairplay
+
       - name: Maven Package
         run: mvn clean package
       

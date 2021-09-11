@@ -1,4 +1,4 @@
-package com.fairplay.pilotfairplay;
+package com.fairplay.web;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

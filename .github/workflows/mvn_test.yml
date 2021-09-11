@@ -1,0 +1,22 @@
+name: Test and Build
+on:
+  push:
+    branches-ignore:
+      - 'master'
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Maven Package
+        run: cd pilot-fairplay && mvn clean package
+      
+      - name: Maven Verify
+        run: cd pilot-fairplay && mvn clean verify -DskipTests

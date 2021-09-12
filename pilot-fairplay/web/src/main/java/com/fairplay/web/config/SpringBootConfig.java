@@ -1,9 +1,9 @@
 package com.fairplay.web.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * Spring Boot configuration class.
@@ -11,7 +11,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
  * @author Stavros Grigoriou
  */
 @Configuration
-@ComponentScan("com.fairplay")
+@EntityScan(basePackages = "com.fairplay.domain")
+@EnableJpaRepositories(basePackages = "com.fairplay.domain")
+@ComponentScan(basePackages = {"com.fairplay.service", "com.fairplay.domain"})
 public class SpringBootConfig {
 
 }

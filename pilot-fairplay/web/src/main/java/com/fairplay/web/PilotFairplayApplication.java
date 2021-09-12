@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Application startup.
  */
-@SpringBootApplication
+@SpringBootApplication()
 public class PilotFairplayApplication {
 
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package com.fairplay.domain.repo;
 
-import com.fairplay.domain.Player;
+import com.fairplay.domain.entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,4 +1,4 @@
-package com.fairplay.domain;
+package com.fairplay.domain.entity;
 
 import lombok.Data;
 
